@@ -1,30 +1,46 @@
 #Start a GIT repository in your "Working Directory"
 git init 
 
+-----------------------------------------
 #to start tracking changes of a file, you need first to add it to the "STAGING Area"
 git add filename.
 
 ##if you want to add all files in a directory
 git add .
 
+-----------------------------------------
 
 #to check what files you're tracking run
 git status
+-----------------------------------------
 
 #to remove a file from STAGING
 git rm --cached filename.ext
 
+##if you want to remove more than 1 file
+git rm --cached -r .
+
+-----------------------------------------
+
 #to commit a file to your "Local Repository" 
 git commit -m "important to add a message with changes - use Present tense"
+
+-----------------------------------------
 
 #check the cmd log to see all your changes
 git log
 
+-----------------------------------------
+
 #if you want to check the difference between the file u have and the file in GIT
 git diff filename.ext
 
+-----------------------------------------
+
 #if you want to roll back to version you saved in GIT
 git checkout filename.ext
+
+-----------------------------------------
 
 #Now to push your local repository to an Online repository like GitHub
 ##First u need to tell it its name ("origin" by convention) and location
@@ -32,3 +48,21 @@ git remote add origin https://github.com/R0YCH/myFirstRepo.git
 
 ##then used the cmd Push with the flag -u, name of repo with name of Branch (main or master)
 git push -u origin main 
+
+-----------------------------------------
+
+#if you dont git to ignore some files in ur working repository, create a .gitignore file
+##the .gitignore file must contain the names of the files you dont want to upload 
+##you can use the # to leave a comment
+##you can use *.txt to ignore all files with txt extension
+
+
+------------------------------------------
+
+#you can Clone a Remote Repository to your local Working Directory
+git clone {GitHub URL repo}
+
+##you can also check the commit history of the repository u cloned, just like u do locally
+git log
+
+-----------------------------------------------
